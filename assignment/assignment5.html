@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+
+    <style>
+        * {
+            font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+
+        }
+
+        header {
+            
+            padding: 10px;
+            color:rgb(0, 0, 0);
+            margin: 3px;
+           
+        }
+
+        body {
+            background-color: bisque;
+        }
+
+        header img {
+            cursor: pointer;
+        }
+
+        header h2 {
+            margin-top: -40px;
+            text-align: center;
+            font-size: 1.8rem;
+            text-shadow: 3px 4px 5px rgb(229, 232, 22);
+
+        }
+
+        header a {
+            float: right;
+            margin-top: -50px;
+            font-size: 1.3rem;
+            margin-right: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+        }
+
+        header a:hover {
+           color: rgb(46, 60, 213);
+        }
+
+        #multiimg {
+            display: flex;
+            flex-direction: row;
+            
+        }
+
+        #multiimg div {
+            width: 100%;
+            margin: 30px 15px;
+            padding: 10px;
+
+        }
+
+        #multiimg h3 {
+            text-transform: capitalize;
+            font-size: 1.5rem;
+
+        }
+
+        #multiimg p {
+
+            font-size: 1.2rem;
+
+        }
+        #multiimg div{
+           
+            opacity: 1;
+            transition: 3s;
+            cursor: pointer;
+            
+        }
+        #multiimg div:hover{
+           transform: scale(1.1);
+           opacity: 0.7;
+          
+           
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <img src="img/menu.png" width="20px" height="30px">
+        <!-- <p > &#9776;</p> -->
+        <h2>&#9832; My Food</h2>
+        <a href="mailto:kriti8942@gmail.com">Mail</a>
+    </header>
+    <main>
+        <div id="multiimg">
+            <div>
+                <img src="img/j1.jpg" height="100%" width="100%">
+
+
+                <h3>
+                    The perfect sandwitch, A real NYC Classic
+
+                </h3>
+                <p>just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div>
+                <img src="img/j2.jpg" height="100%" width="100%">
+
+                <h3>
+                    Let Me tell you about this steak
+
+                </h3>
+                <p>Once again, some random text to lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+            <div>
+                <img src="img/j3.jpg" height="100%" width="100%">
+
+                <h3>
+                    Cherries, interrupted
+
+                </h3>
+                <p>lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+                <p>what else?</p>
+            </div>
+            <div>
+                <img src="img/j1.jpg" height="100%" width="100%">
+
+                <h3>
+                    Once again , Robust wine and vegetable Pasta
+
+                </h3>
+                <p>just some random text, lorem ipsum text praesent tincidunt ipsum lipsum.</p>
+            </div>
+
+        </div>
+
+
+       
+    </main>
+</body>
+
+</html>

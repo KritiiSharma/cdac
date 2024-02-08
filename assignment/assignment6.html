@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" &gt;>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <title>Kriti Sharma Assignment 6</title>
+    <style>
+        * {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        header {
+            height: 60px;
+            background-color: rgb(235, 236, 236);
+            
+        }
+
+        .leftsection {
+            font-size: 1.4rem;
+            float: left;
+            padding: 15px;
+            font-family: 'Sriracha', cursive;
+        }
+
+        .rightsection {
+            float: right;
+            display: block;
+            margin-right: 10px;
+            margin-top: 15px;
+        }
+
+        .rightsection a {
+            font-size: 1rem;
+            color: black;
+            text-decoration: none;
+            padding: 20px;
+        }
+
+        .rightsection a:hover {
+
+            background-color: black;
+            color: rgb(255, 255, 255);
+
+        }
+
+        .container {
+            background-size: 100% 100%;
+            width: 100%;
+            height: 900px;
+            margin-bottom: 30px;
+            background-repeat: no-repeat;
+            background-image: url("https://images.unsplash.com/photo-1587620962725-abab7fe55159?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1031&q=80");
+        }
+
+
+        .text-block {
+            position: absolute;
+            text-align: center;
+            color: rgb(255, 255, 255);
+
+
+        }
+
+        .text-block h1 {
+            text-transform: uppercase;
+
+            color: rgb(255, 255, 255);
+            font-size: 3.9rem;
+            margin-left: 480px;
+            margin-top: 190px;
+            font-weight: bold;
+        }
+
+        .text-block p {
+
+            color: rgb(215, 215, 215);
+            font-size: 1.3rem;
+            margin-left: 490px;
+            margin-top: -20px;
+        }
+
+        .button {
+            background-color: rgb(140, 183, 248);
+            color: rgb(0, 0, 0);
+            font-size: larger;
+            margin-left: 500px;
+            padding: 10px 25px;
+            font-weight: bold;
+            border-style: none;
+            border-radius: 5px;
+            cursor: pointer;
+
+        }
+
+        .button:hover {
+            text-shadow: 3px 4px 7px rgb(17, 0, 255);
+            color: rgb(255, 255, 255);
+            background-color: lightseagreen;
+            font-size: 1.4rem;
+        }
+
+        .achievement {
+
+            display: flex;
+            flex-direction: row;
+            margin-left: 190px;
+            margin-right: 190px;
+        }
+
+        .kri {
+            padding: 40px;
+
+        }
+
+        .kri pre {
+            color: black;
+            font-size: 1.1rem;
+            margin-left: 110px;
+        }
+
+        .kri p {
+            text-align: justify;
+        }
+
+        .kri i {
+            padding: 5px;
+            margin-left: 130px;
+            margin-bottom: 10px;
+            border: 1px solid black;
+            border-radius: 50px;
+            transform: scale(2.5);
+        }
+
+        .about {
+
+            margin-left: 130px;
+            margin-right: 130px;
+        }
+
+        .firstsection {
+            float: left;
+
+        }
+
+        .firstsection h1 {
+            font-size: 3.3rem;
+            margin-top: 150px;
+
+        }
+
+        .firstsection p {
+            padding: 1px;
+            width: 60%;
+            font-size: 1.1rem;
+
+        }
+
+        .secondsection img {
+            float: right;
+            width: 50%;
+            height: 50%;
+            margin-top: -280px;
+            border-radius: 15px;
+            border-style: none;
+        }
+
+        footer {
+            display: flex;
+            flex-direction: row;
+            background-color: rgb(19, 19, 110);
+            color: white;
+
+            margin-top: 470px;
+        }
+
+        footer p {
+            float: left;
+            margin-left: 90px;
+            margin-top: 90px;
+        }
+
+        footer div h4 {
+            font-weight: 500;
+        }
+
+        .moreinfo {
+            display: flex;
+            flex-direction: column;
+            margin-left: 650px;
+        }
+
+        .moreinfo a {
+            font-size: 1rem;
+            padding: 5px;
+        }
+
+        .sociallink {
+
+            display: flex;
+            flex-direction: column;
+
+            margin-left: 150px;
+
+        }
+
+        .sociallink a {
+            font-size: 1rem;
+            padding: 5px;
+        }
+
+       
+        @media only screen and (max-width:1100px) {
+
+            .container {
+
+                width: 100%;
+                height: 700px;
+            }
+
+            .text-block h1 {
+                text-transform: uppercase;
+                color: rgb(255, 255, 255);
+                font-size: 3.1rem;
+                margin-left: 180px;
+                margin-top: 190px;
+                font-weight: bold;
+            }
+
+            .text-block p {
+
+                color: rgb(215, 215, 215);
+                font-size: 1.2rem;
+                margin-left: 190px;
+                margin-top: -20px;
+            }
+
+            .button {
+                background-color: rgb(140, 183, 248);
+                color: rgb(0, 0, 0);
+                font-size: larger;
+                margin-left: 190px;
+                padding: 10px 25px;
+                font-weight: bold;
+                border-style: none;
+                border-radius: 5px;
+                cursor: pointer;
+
+            }
+
+            .achievement {
+
+                display: flex;
+                flex-direction: column;
+                margin-left: 140px;
+                margin-right: 140px;
+            }
+
+
+
+            .kri pre {
+                color: black;
+                font-size: 1.1rem;
+                margin-left: 160px;
+            }
+
+            .kri p {
+                text-align: justify;
+            }
+
+            .kri i {
+                padding: 5px;
+                margin-left: 190px;
+                margin-bottom: 10px;
+                border: 1px solid black;
+                border-radius: 50px;
+                transform: scale(2.5);
+            }
+
+            .about {
+
+                margin-left: 40px;
+                margin-right: 40px;
+            }
+
+
+
+            .firstsection h1 {
+                font-size: 3.3rem;
+                margin-top: 150px;
+
+            }
+
+            .firstsection p {
+
+                width: 45%;
+
+
+            }
+
+            .secondsection img {
+                float: right;
+                width: 50%;
+                height: 50%;
+                margin-top: -280px;
+                border-radius: 15px;
+                border-style: none;
+            }
+
+            footer {
+                display: flex;
+                flex-direction: col;
+                background-color: rgb(19, 19, 110);
+                color: white;
+
+                margin-top: 470px;
+            }
+
+            footer p {
+                float: left;
+                margin-left: 90px;
+                margin-top: 90px;
+            }
+
+            footer div h4 {
+                font-weight: 500;
+            }
+
+            .moreinfo {
+                display: flex;
+                flex-direction: column;
+                margin-left: 150px;
+            }
+
+            .moreinfo a {
+                font-size: 1rem;
+                padding: 5px;
+            }
+
+            .sociallink {
+
+                display: flex;
+                flex-direction: column;
+
+                margin-left: 150px;
+
+            }
+
+            .sociallink a {
+                font-size: 1rem;
+                padding: 5px;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="leftsection">Developer</div>
+            <div class="rightsection">
+                <a href="#" style="order: 1;">Home</a>
+                <a href="#" style="order: 3;">About</a>
+                <a href="#" style="order: 2;">Blog</a>
+                <a href="#" style="order: 4;">Contact</a>
+            </div>
+        </nav>
+
+    </header>
+
+    <main>
+
+        <div class="container">
+            <div class="text-block">
+                <h1>A WEB Developer</h1>
+                <p>I am a web developer and I love to create websites.</p>
+                <button class="button">Learn More</button>
+            </div>
+        </div>
+        <div class="achievement">
+            <div class="kri">
+                <i class="fas fa-atom"></i>
+                <pre>PROJECTS</pre>
+                <p>I have worked on many projects and I am very proud of them. I am a very good developer and I am
+                    always looking for new projects.</p>
+            </div>
+            <div class="kri">
+                <i class="fas fa-skiing"></i>
+                <pre>  SKILLS</pre>
+                <p>I have a lot of skills and I am very good at them. I am very good at programming and I am always
+                    looking for new skills.</p>
+            </div>
+            <div class="kri">
+                <i class="fas fa-ethernet"></i>
+                <pre>NETWORK</pre>
+                <p>I have a lot of network skills and I am very good at them. I am very good at networking and I am
+                    always looking for new network skills.</p>
+            </div>
+
+        </div>
+        <hr>
+        <div class="about">
+            <div class="firstsection">
+                <h1>ABOUT ME</h1>
+                <p>I am a web developer and I love to create websites. I am a very good developer and I am always
+                    looking for new projects.</p>
+            </div>
+            <div class="secondsection">
+                <img
+                    src="https://images.unsplash.com/photo-1596495578065-6e0763fa1178?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=871&q=80">
+            </div>
+        </div>
+
+
+    </main>
+    <br><br>
+    <footer>
+        <p>&copy; 2024 Developer</p>
+        <div class="moreinfo">
+            <h4>MORE INFO</h4>
+            <a>Home</a>
+            <a>About</a>
+            <a>Blog</a>
+            <a>Contact</a>
+        </div>
+        <div class="sociallink">
+            <h4>SOCIAL LINK</h4>
+            <a>
+                <i class="fab fa-facebook"></i></a>
+
+            <a><i class="fab fa-twitter"></i></a>
+            <a><i class="fab fa-instagram"></i></a>
+            <a><i class="fab fa-"></i></a>
+        </div>
+    </footer>
+
+</body>
+
+</html>

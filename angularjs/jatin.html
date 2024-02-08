@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Word Game</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+
+    #game-container {
+      display: none;
+    }
+
+    #result {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div id="welcome-container">
+    <h1>Welcome to the Word Game!</h1>
+    <label for="userName">Enter your name:</label>
+    <input type="text" id="userName">
+    <button onclick="startGame()">Start Game</button>
+  </div>
+
+  <div id="game-container">
+    <h2 id="greeting"></h2>
+    <div id="word-container"></div>
+    <label for="userGuess">Your Guess:</label>
+    <input type="text" id="userGuess">
+    <button onclick="checkGuess()">Submit Guess</button>
+    <p id="result"></p>
+    <p id="finalMarks"></p>
+    <p id="finalMessage"></p>
+    <button onclick="playAgain()">Play Again</button>
+  </div>
+
+  <script>
+    let userName;
+    let currentWord;
+    let attempts = 0;
+    let score = 0;
+
+    const words = ["apple", "banana", "orange", "grape", "kiwi", "strawberry", "blueberry", "pineapple", "watermelon"];
+
+    function startGame() {
+      userName = document.getElementById("userName").value;
+      if (userName.trim() === "") {
+        alert("Please enter your name.");
+        return;
+      }
+
+      document.getElementById("welcome-container").style.display = "none";
+      document.getElementById("game-container").style.display = "block";
+
+      document.getElementById("greeting").innerText = `Welcome ${userName}, Let's play the word game!`;
+      startRound();
+    }
+
+    function startRound() {
+      currentWord = getRandomWord();
+      displayWord();
+      document.getElementById("userGuess").value = "";
+      document.getElementById("result").innerText = "";
+      attempts = 0;
+    }
+
+    function getRandomWord() {
+      return words[Math.floor(Math.random() * words.length)];
+    }
+
+    function displayWord() {
+      const jumbledWord = shuffleWord(currentWord);
+      document.getElementById("word-container").innerText = jumbledWord;
+    }
+
+    function shuffleWord(word) {
+      return word.split('').sort(() => Math.random() - 0.5).join('');
+    }
+
+    function checkGuess() {
+      const userGuess = document.getElementById("userGuess").value.toLowerCase();
+
+      if (userGuess === currentWord) {
+        calculateScore();
+      } else {
+        attempts++;
+        if (attempts < 3) {
+          showResult(`Incorrect! Try again. (Attempts left: ${3 - attempts}), "red"`);
+        } else {
+          showResult("Sorry, out of moves. 😢", "red");
+          document.getElementById("word-container").innerText =`The correct word was: ${currentWord}`;
+          document.getElementById("userGuess").disabled = true;
+          
+        }
+      }
+    }
+
+    function showResult(message, color) {
+      document.getElementById("result").innerText = message;
+      document.getElementById("result").style.color = color;
+    }
+
+    function calculateScore() {
+      if (attempts === 0) {
+        score = 100;
+        showResult("Correct! 🌟", "green");
+      } else if (attempts === 1) {
+        score = 70;
+        showResult("Correct! 😊", "green");
+      } else if(attempts === 2) {
+        score = 40;
+        showResult("Correct! 😢", "green");
+      }
+
+      showFinalMarksAndMessage(score);
+    }
+
+    function showFinalMarksAndMessage(finalScore) {
+      document.getElementById("finalMarks").innerHTML = `Your marks: ${finalScore} ${getEmoji(finalScore)}`;
+      document.getElementById("finalMessage").innerHTML = getFinalMessage(finalScore);
+    }
+
+    function getEmoji(score) {
+      if (score === 100) return "⭐";
+      if (score === 70) return "😊";
+      if (score === 40) return "😢";
+    }
+
+    function getFinalMessage(score) {
+      if (score === 100) return "Excellent! ";
+      if (score === 70) return "Good job! ";
+      if (score === 40) return "Nice try. ";
+    }
+
+    function playAgain() {
+      document.getElementById("userGuess").disabled = false;
+      document.getElementById("finalMarks").innerText = "";
+      document.getElementById("finalMessage").innerText = "";
+      startRound();
+    }
+  </script>
+
+</body>
+</html>

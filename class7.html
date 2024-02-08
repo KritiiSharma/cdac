@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Class7</title>
+    <style>
+        .mask {
+            mask-image: linear-gradient(white, transparent);
+            text-align: center;
+        }
+
+        body {
+            background-color: lightgray;
+        }
+
+        .pagination {
+            display: flex;
+        }
+
+        .pagination a {
+            color: rgb(0, 0, 0);
+            float: left;
+            padding: 10px 20px;
+            text-decoration: none;
+        }
+
+        a.active {
+            background-color: brown;
+            color: white;
+        }
+
+        a:hover:not(.active) {
+            background-color: black;
+            color: white;
+        }
+
+        /* div:nth-child(2) {
+            background-color: bisque;
+        } */
+
+        p:nth-last-child(4) {
+            background-color: aqua;
+        }
+
+        span {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .box {
+            background-color: lightseagreen;
+            color: black;
+            font-size: 30px;
+            padding: 20px;
+        }
+
+        /* This only changes this particular animation duration  */
+        .animate__animated.animate__bounce {
+            --animate-duration: 2s;
+        }
+
+        /* This changes all the animations globally */
+        :root {
+            --animate-duration: 1000ms;
+            --animate-delay: 0.5s;
+        }
+
+        .box {
+            display: inline-block;
+            margin: 0 0.5rem;
+
+            animation: bounce;
+            /* referring directly to the animation's @keyframe declaration */
+            animation-duration: 2s;
+            /* don't forget to set a duration! */
+        }
+
+        @media (min-width:600px) and (max-width:800px) {
+
+            .box {
+                background-color: lightslategray;
+                color: black;
+            }
+        }
+
+        @media only screen and (max-width:600px) {
+            span {
+                background-color: lightsalmon;
+
+                flex-direction: column;
+                text-align: center;
+                margin: 10px;
+            }
+
+            .box {
+                margin: 10px;
+                background-color: lightgreen;
+            }
+        }
+
+        #heart {
+            position: relative;
+            width: 100px;
+            height: 90px;
+        }
+
+        #heart:before,
+        #heart:after {
+            position: absolute;
+            content: "";
+            left: 50px;
+            top: 0;
+            width: 50px;
+            height: 80px;
+            background: red;
+            border-radius: 50px 50px 0 0;
+            transform: rotate(-45deg);
+            transform-origin: 0 100%;
+        }
+
+        #heart:after {
+            left: 0;
+            transform: rotate(45deg);
+            transform-origin: 100% 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="mask">
+        <img src="img/j1.jpg" class=" animate__animated animate__lightSpeedInRight">
+    </div>
+
+    <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#" class="active">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+    </div>
+    <div>
+        <h1 class="animate__animated animate__rotateIn">Hello</h1>
+    </div>
+    <div>
+        <h1 class="animate__animated animate__rollIn">Welcome</h1>
+    </div>
+    <div>
+        <h1 class=" animate__animated animate__flip" style="animation-duration: 4s;">Swag se karenge sabka swagat</h1>
+    </div>
+    <div>
+        <p>p-tag start here </p>
+        <p>Good morning </p>
+        <p>how are you? </p>
+        <p>Good to see you. </p>
+        <p>Happy journey! </p>
+        <p>Nice to meet you </p>
+    </div>
+
+
+    <span>
+        <div class="box">box 1</div>
+        <div class="box">box 2</div>
+        <div class="box">box 3</div>
+        <div class="box">box 4</div>
+    </span>
+    <br><br>
+    <div id="heart" class=" animate__animated animate__heartBeat" style="animation-duration: 5s;"></div>
+
+    <br>
+    <br>
+    <div class=" animate__animated animate__fadeInLeft" style="animation-duration: 9s; text-align: center;"><img
+            src="img/sport-car.png"></div>
+</body>
+
+</html>

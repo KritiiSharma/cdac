@@ -1,0 +1,105 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('/img/n2.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    display: fixed;
+}
+
+.m {
+    margin-top: 5px;
+    text-align: center;
+    background-color: #000000;
+    color: white;
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    background-color: #b4cdff;
+    padding: 20px;
+    border-radius: 15px;
+    border: 2px solid #333;
+    /* opacity: 0.95; */
+    transition: opacity 0.3s ease-in-out;
+}
+
+#game-container {
+    display: none;
+    margin-top: 20px;
+}
+
+button {
+    padding: 12px;
+    margin-top: 15px;
+    cursor: pointer;
+    background-color: #469649;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: #315d33;
+    /* border-style: groove; */
+}
+
+input {
+    padding: 10px;
+    margin-right: 15px;
+}
+
+#result {
+    font-weight: bold;
+    color: #eb2711;
+    margin-top: 15px;
+}
+
+#finalMarks {
+    font-weight: bold;
+    margin-top: 15px;
+    color: #000000; /* Black color for score */
+    text-shadow: 2px 2px 6px #ff0000;
+    border: 2px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+
+
+.emoji {
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+#word-container {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    color: #1f6f34;
+   
+}
+
+.footer {
+    background-color: #000000;
+    color: white;
+    padding: 5px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.game-over {
+    background-color: red;
+    color: white;
+}

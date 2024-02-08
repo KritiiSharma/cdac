@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: rgb(232, 232, 255);
+
+        }
+
+        #hello {
+            font-size: larger;
+            border: 3px solid black;
+        }
+
+        #helo {
+            padding: 75px;
+            border: 2px solid black;
+            background-color: rgb(206, 154, 252);
+
+        }
+
+        #helo:hover {
+            color: red;
+            font-size: 1.3rem;
+            text-decoration: underline;
+            text-overflow: initial;
+        }
+
+        #helo1 {
+            border-style: dashed;
+        }
+
+        .bend {
+            height: 50px;
+            width: 10%;
+            border: 5px solid rgb(92, 0, 221);
+            padding: 89px 20px 10px 30px;
+            /* TRBL */
+            margin: 5px;
+
+        }
+
+        .cursor {
+            background-color: antiquewhite;
+            border: 1px solid red;
+            display: inline-table;
+        }
+
+        a:link {
+            color: red;
+        }
+
+        a:visited {
+            color: green;
+        }
+
+        div {
+            border: 2px solid black;
+            /* width: calc(100% - 30px); */
+            padding: 40px;
+            /* line-height: 120px; */
+        }
+
+        /* div p {
+            background-color: aqua;
+        } */
+
+        /* div+p{
+            background-color: blueviolet;
+        } */
+        /* div~p {
+            background-color: aqua;
+        } */
+
+        a:hover {
+            color: purple;
+        }
+
+        div>p {
+            color: blue;
+            background-color: blanchedalmond;
+        }
+
+        .button1 {
+            background-color: aquamarine;
+            text-decoration: none;
+            font-size: 1.4rem;
+            color: black;
+            padding: 4px;
+            margin: 5px;
+        }
+
+        .button3 {
+            background-color: blue;
+            color: white;
+            padding: 5px;
+            border-radius: 10px;
+            border-style: double;
+            cursor: pointer;
+        }
+        .img1{
+            width: 55%;
+            position: static;
+            top: 40px;
+       
+
+        }
+        .img2{
+            width:35%;
+            position: relative;
+            top:40px;
+        }
+        .box1{
+            z-index: 1;
+            background-color: rgb(255, 230, 198);
+            position: absolute;
+            margin-left: 190px;
+            height: 130px;
+            width: 80%;
+            text-align: right;
+   font-weight: bold;
+   font-size: larger;
+   
+     
+
+        }
+        .box2{
+            z-index: 4;
+            position: absolute;
+            background-color: rgb(64, 145, 169);
+            margin-left: 140px;
+            height: 90px;
+            width: 50%;
+            text-align: right;
+          font-weight: bold;
+          font-size: larger;
+          
+        }
+
+        .box3{
+            z-index: 7;
+            position: absolute;
+            background-color: rgb(171, 152, 255);
+            margin-left: 2px;
+            height: 30px;
+            width: 20%;
+          font-weight: bold;
+          font-size: larger;
+          
+        }
+    </style>
+</head>
+
+<body>
+    <p id="hello"
+        style="text-shadow: 2px 3px 4px red; text-overflow: ellipsis;overflow: scroll; width: 100%; height: 60px;">This
+        is the Class 4.. Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old and pursuing
+        final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). To work for an organization where proffessionalism and
+        enthusiasm are recognized and continuously acquire skills in emerging trends and to achieve a position as a web
+        developer. I have a wide range of skills that include front-end(HTMLS,CSS3,JAVASCRIPT,REACT,REACTJS) ,back-end
+        developement using open source technology(Node.js, php),design(working closly with
+        designers),database(Mysql,Oracle). </p>
+
+        <img src="img/p1.jfif">
+
+    <p id="helo">kriti sharma .... Beyond coding, my passion for Artificial Intelligence drives me to stay updated
+        with the latest trends. I'm eager to contribute my skills and collaborate in innovative projects that
+        shape
+        the future of technology.</p>
+    <p id="helo1">hello without padding</p>
+
+    <div class="Bend">MY 5th class in web designing and development with angular and PHP.</div>
+    <div class="cursor">
+        <h1>various types of cursor</h1>
+        <div style=" cursor: pointer;">cursor: pointer</div>
+        <div style="cursor:copy">cursor:copy</div>
+        <div style="cursor:move">cursor:move</div>
+        <div style="cursor: e-resize;">cursor: e-resize</div>
+        <div style="cursor: ew-resize;">cursor: ew-resize</div>
+        <div style="cursor: wait;">cursor: wait</div>
+        <div style="cursor: text;">cursor: text</div>
+        <div style="cursor: help;">cursor: help</div>
+        <div style="cursor: progress">cursor: progress</div>
+        <div style="cursor: zoom-in;">cursor: zoom-in</div>
+        <div style="cursor: zoom-out;">cursor: zoom-out</div>
+    </div>
+    <a href="">GOOGLE</a>
+    <a href="">Instagram</a>
+    <a href="">Facebook</a>
+
+
+
+    <hr>
+
+    <div>
+        <h1>styling with div p & div>p & div+p</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <section>
+            <p>Paragraph 3</p>
+        </section>
+        <p>Paragraph 4</p>
+    </div>
+    <p> outside div Paragraph 1</p>
+    <p> outside div Paragraph 2</p>
+    <p>outside div Paragraph 3</p>
+
+
+    <div>
+        <h1>CSS buttons</h1>
+        <button class="button1">Default buttons</button>
+        <a href="">Link button</a>
+        <button style="box-shadow: 2px 3px red; margin: 5px">Shadow on button</button>
+        <button class="button3">Border on button</button>
+    </div>
+    <br>
+
+
+    <div>
+        <h1>float left & right & inline-end & inline-start</h1>
+        <p style="float: left;">Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old and
+            pursuing
+            final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). </p>
+        <p style="float: right;">Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old and
+            pursuing
+            final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). </p>
+        <p style="float: inline-end;">Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old
+            and pursuing
+            final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). </p>
+        <p style="float: inline-start;">Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old
+            and pursuing
+            final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). </p>
+    </div>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+    <div style="width:max(50px,50%)">
+        Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old and pursuing
+        final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). To work for an organization where proffessionalism and
+        enthusiasm are recognized and continuously acquire skills in emerging trends and to achieve a position as a web
+        developer.
+    </div><br><br><br>
+    <div >
+        Hii, I am Kriti sharma from Hamirpur, Himachal Pradesh, India. I am 21 years old and pursuing
+        final year b.tech(CSE) from ABVGIET PRGATINAGAR(SHIMLA). To work for an organization where proffessionalism and
+        enthusiasm are recognized and continuously acquire skills in emerging trends and to achieve a position as a web
+        developer.
+    </div>
+    <br><br><br><br>
+
+    <p class="img1">
+        <img src="img/p1.jfif">
+    </p>
+    <p class="img2"><img src="img/p2.jfif"></p><br><br>
+
+<div class="box1">box1</div>
+<div class="box2">box2 </div>
+<div class="box3">box 3</div>
+</body>
+
+</html>

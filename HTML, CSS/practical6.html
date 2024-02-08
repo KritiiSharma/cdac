@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practical6</title>
+    <script>
+        let year = 1990;
+        if (year % 4 == 0 && year % 400 == 0 && (year % 100 != 0)) {
+            document.write("1990 is a leap year");
+        } else {
+            document.write("1990 is not a leap year");
+        }
+        document.write("<br>");
+
+        let number = 22;
+        let result = number % 2 == 0 ? document.write("given number is even") : document.write("given no is odd");
+        document.write("<br>");
+
+        let a = 5;
+        let b = 6;
+        let c = 7;
+        let s = (a + b + c) / 2;
+        let area = Math.sqrt(s * (s - a) * (s - b) * (s - c));
+        document.write("area of triangle is : " + area.toFixed(5));
+        document.write("<br>");
+        let multiply = 27;
+        if ((multiply % 3 == 0)) {
+            document.write("27 is multiply of 3")
+        } else if (multiply % 7 == 0) {
+            document.write("27 is a multiply of 7");
+        } else {
+            document.write("given number is not divisible by both 3 and 7");
+        }
+        document.write("<br>");
+
+        let radius = 25;
+        let areaofcircle = Math.PI * radius * radius;
+        document.write("area of circle is " + areaofcircle);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

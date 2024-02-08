@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</head>
+
+<body>
+
+    <!-- <div ng-app="myApp" ng-bind-template="{{firstName}} {{lastName}}" ng-controller="myCtrl">  
+    </div>  
+    <script>  
+    var app = angular.module("myApp", []);  
+    app.controller("myCtrl", function($scope) {  
+        $scope.firstName = "Sonoo";  
+        $scope.lastName = "Jaiswal";  
+    });  
+    </script>   -->
+
+
+    <!-- <input ng-blur="count = count + 1" ng-init="count=0" />
+    <h1>{{count}}</h1>
+    <p>By default, the value is 0 but it will increase the value of the variable "count" every time when the input field
+        loses focus.</p> -->
+
+
+
+    <!-- <div ng-controller="myCtrl">
+        <p>Type something in the input field:</p>
+        <input type="text" ng-change="myFunc()" ng-model="myValue" />
+        <p>The input field has changed {{count}} times.</p>
+    </div>
+
+    <script>
+        angular.module('myApp', [])
+            .controller('myCtrl', ['$scope', function ($scope) {
+                $scope.count = 0;
+                $scope.myFunc = function () {
+                    $scope.count++;
+                };
+            }]);  
+        </script> -->
+
+    <!-- <div ng-app="">
+
+        <p>Courses offered:</p>  
+<input type="checkbox" ng-model="all"> Check all<br><br>  
+<input type="checkbox" ng-checked="all">Java<br>  
+<input type="checkbox" ng-checked="all">Oracle<br>  
+<input type="checkbox" ng-checked="all">C/C++<br>  
+<input type="checkbox" ng-checked="all">.NET<br>  
+<input type="checkbox" ng-checked="all">SQT<br>  
+<input type="checkbox" ng-checked="all">Hadoop<br>  
+<input type="checkbox" ng-checked="all">PHP  
+<p>Click "Check all" to select all courses.</p>
+</div> -->
+
+    <!-- <div ng-app="">  
+    <p>Choose a class:</p>  
+    <select ng-model="home">  
+    <option value="normal">Normal</option>  
+    <option value="medium">Medium</option>  
+    <option value="advance">Advance</option>  
+    </select>  
+    <div ng-class="home">  
+      <h1>Welcome To JavaTpoint!</h1>  
+      <p>A solution of all technologies!</p>  
+    </div>  
+</div> -->
+
+    <!-- 
+<div ng-app="myApp">  
+  
+    <table ng-controller="myCtrl">  
+    <tr ng-repeat="x in records" ng-class-even="'striped'">  
+      <td>{{x.Name}}</td>  
+      <td>{{x.Country}}</td>  
+    </tr>  
+    </table>  
+      </div>
+    <script>  
+    var app = angular.module("myApp", []);  
+    app.controller("myCtrl", function($scope) {  
+      $scope.records = [  
+        {  
+          "Name" : "Ajeet Kumar",  
+          "Country" : "India"  
+        },  
+        {  
+          "Name" : "Suresh Prabhu",  
+          "Country" : "India"  
+        },  
+        {  
+          "Name" : "Donald Trump",  
+          "Country" : "USA"  
+        },  
+        {  
+          "Name" : "Nawaz Sharif",  
+          "Country" : "Pakistan"  
+        }  
+      ]  
+    });  
+    </script>  
+     -->
+
+
+
+    <!-- 
+     <div ng-app="myApp">  
+        <table ng-controller="myCtrl">  
+        <tr ng-repeat="x in records" ng-class-odd="'striped'">  
+          <td>{{x.Name}}</td>  
+          <td>{{x.Country}}</td>  
+        </tr>  
+        </table>  </div>
+        <script>  
+        var app = angular.module("myApp", []);  
+        app.controller("myCtrl", function($scope) {  
+           $scope.records = [  
+            {  
+              "Name" : "Ajeet Kumar",  
+              "Country" : "India"  
+            },  
+            {  
+              "Name" : "Suresh Prabhu",  
+              "Country" : "India"  
+            },  
+            {  
+              "Name" : "Donald Trump",  
+              "Country" : "USA"  
+            },  
+            {  
+              "Name" : "Nawaz Sharif",  
+              "Country" : "Pakistan"  
+            }  
+          ]  
+        });  
+        </script>   -->
+
+
+
+    <!-- <div ng-app="">  
+            <p>Click the button:</p>  
+            <button ng-click="count = count + 1" ng-init="count=0">OK</button>  
+            <p>The button has been clicked <strong>{{count}} </strong>times.</p>  
+            <p><strong>Note:</strong>This example counts a value every time you click on the button and increase the value of the variable.</p>  
+        </div>   -->
+
+
+
+    <!-- 
+        <div ng-app="">  
+            <p ng-cloak>{{ 50 + 5 + 5 -10 }}</p>  
+            <p><b>Note:</b> This is small example so it would probably not flicker even without the ng-cloak directive, but it specifies how to include the directive on an HTML element.</p>  
+            </div>   -->
+
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        Full Name: {{firstName + " " + lastName}}
+    </div>
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myCtrl', function ($scope) {
+            $scope.firstName = "Aryan";
+            $scope.lastName = "Jaiswal";
+        });  
+    </script> -->
+
+
+
+
+    <!-- <div ng-app="">  
+        <input ng-copy="count = count + 1" ng-init="count=0" value="Copy this text" />  
+        <p>The text has been copied <strong> {{count}} </strong>times.</p>  
+        <p>This example shows that every time you copy the content in the input field, it will increase the value of the variable "count".</p>  
+    </div>  -->
+
+
+
+
+    <!-- <div ng-app="" ng-csp>  
+        <div>  
+        <p>My first expression: {{ 5 + 5 }}</p>  
+        </div>  
+        <p>By using the ng-app directive, you are changing the way AngularJS executes its own code.</p>  
+        <p>We cannot tell the difference, but AngularJS is forced to use another way of evaluate expressions, which can increase the evaluation time up to 30%.</p>  
+    </div> -->
+
+
+    <!-- <div ng-app="">  
+        <input ng-cut="count = count + 1" ng-init="count=0" value="Cut this text" />  
+        <p>The text has been cut<strong> {{count}} </strong>times.</p>  
+        <p>This example shows that every time you cut the content in the input field, it will increase the value of the variable "count".</p>  
+    </div> -->
+
+
+
+
+    <!-- <div ng-app="">  
+        <h1 ng-dblclick="count = count + 1" ng-init="count=0">Double click on me!</h1>  
+        <p>The header has been double-clicked<strong> {{count}} </strong>times.</p>  
+        <p>In this example, every double click on the header increases the value of the variable "count".</p>  
+    </div> -->
+
+
+
+
+
+    <!-- <div ng-app="">  
+        <input ng-focus="count = count + 1" ng-init="count=0" />  
+        <h1>{{count}}</h1>  
+        <p>In this example, everytime you make a focus on the specified box, it increases the value of the variable "count"</p>  
+    </div>  -->
+
+
+
+    <!-- <div ng-app="">  
+        Hide HTML: <input type="checkbox" ng-model="myVar">  
+        <div ng-hide="myVar">  
+        <h1>Welcome to JavaTpoint!</h1>  
+        <p>A  solution of all technologoes.</p>  
+        </div>  
+    </div>  -->
+
+
+
+
+    <!-- <div ng-app="">  
+        <div ng-init="myVar = 'http://www.javatpoint.com/java-tutorial'">  
+        <h1>Java Tutorials</h1>  
+        <p>Go to <a ng-href="{{myVar}}">{{myVar}}</a> to learn java.</p>  
+        </div>  
+        <p>You can use here original href attribute, but in AngularJS, the ng-href attribute is safer.</p>  
+    </div>  -->
+
+
+
+    <!-- <div ng-app="">  
+        Keep HTML: <input type="checkbox" ng-model="myVar" ng-init="myVar = true">  
+        <div ng-if="myVar">  
+        <h1>Welcome to JavaTpoint!</h1>  
+        <p>A solution of all technologies..</p>  
+        <hr>  
+        </div>  
+        <p>If you uncheck the checkbox then DIV element will be removed.</p>  
+        <p>If you check the checkbox then DIV element will return.</p>  
+    </div>   -->
+
+
+
+
+
+
+
+
+    <!-- <div ng-app="">  
+        <div ng-include="'include.htm'"></div>  
+    </div> -->
+
+
+<!-- 
+    <div ng-app="" ng-init="myText='Hello JavaTpoint!'">  
+        <h1>{{myText}}</h1>  
+        <p>The ng-init directive has created an AngularJS variable, which can be used in the application.</p>  
+        </div> -->
+
+
+        <!-- <html ng-app ng-jq>  
+...  
+...  
+</html>   -->
+
+<!-- 
+<div ng-app="">  
+    <p>Press any key within the input box.</p>  
+    <input ng-keydown="count = count + 1" ng-init="count=0" />  
+    <h1>{{count}}</h1>  
+    <p>Every time you press a key in the input field, this will increase the value of the variable "count".</p>  
+</div> -->
+
+
+<!-- 
+<div ng-app="">  
+    <p>Press any key within the input box.</p>  
+    <input ng-keydown="count = count + 1" ng-init="count=0" />  
+    <h1>{{count}}</h1>  
+    <p>Every time you press a key in the input field, this will increase the value of the variable "count".</p>  
+</div> -->
+
+
+
+
+
+
+
+<!-- <div ng-app="">  
+    <p>Press and leave any key within the input box.</p>  
+    <input ng-keyup="count = count + 1" ng-init="count=0" />  
+    <h1>{{count}}</h1>  
+    <p>Every time you leave a key after pressing in the input field, this will increase the value of the variable "count".</p>  
+</div> -->
+
+
+
+
+<!-- 
+<div ng-app="">  
+    <p>Write some names in the input field, use a comma to separate them:</p>  
+    <input ng-model="customers" ng-list/>  
+    <p>This example will convert your input into an array, one item for each name:</p>  
+    <pre>{{customers}}</pre>  
+    </div>   -->
+
+
+
+
+
+    <!-- <div ng-app="">  
+        Click here to show the content of the details list: <input type="checkbox" ng-model="showDetails"><br>  
+        <br>  
+        <details ng-open="showDetails">  
+          <summary>Copyright 2011-2016.</summary>  
+          <p> - by JavaTpoint. All Rights Reserved.</p>  
+        </details>  
+        <p><b>Note:</b> The details tag is currently only supported in Opera, Chrome, and Safari.</p>  
+    </div> -->
+
+
+
+
+
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">  
+        <select ng-model="selectedName" ng-options="item for item in names">  
+        </select>  
+        </div>  
+        <script>  
+        var app = angular.module('myApp', []);  
+        app.controller('myCtrl', function($scope) {  
+            $scope.names = ["Java", ".Net", "PHP" , "C/C++", "Oracle"];  
+        });  
+        </script>   -->
+
+
+
+
+
+
+        <div ng-app="">  
+            <input ng-paste="count = count + 1" ng-init="count=0" value="Paste any text here!" />  
+            <p>Text has been pasted <strong>{{count}}</strong> times.</p>  
+            <p><strong>Note:</strong> Every time yo paste any text here, it will increase the value of the variable "count".</p>  
+        </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 10</title>
+    <script>
+        //----------------------------------------------user defined function-------------
+        function sqaure(n1) {
+            return n1 * n1;
+        }
+        let r1 = sqaure(5);
+        document.write(r1);
+
+        document.write("<br>");
+        //-------------------------------------------------------greet----
+
+        function greet(name) {
+            document.write(`hello, ${name}`);
+        }
+        greet("kriti");
+
+
+        //--------------------------------------------------addition----------------------------
+        document.write("<br>");
+        function add(n1, n2) {
+            return n1 + n2;
+        }
+        let r2 = sqaure(528, 879);
+        document.write(r2);
+
+        document.write("<br>");
+        //--------------------------------------------------default value--------------------------------------------------------------------
+
+        function greet(name = "Guest") {
+            document.write(`hello, ${name}!`);
+        }
+        greet();
+        document.write("<br>");
+        greet("kriti");
+        document.write("<br>");
+
+        //--------------------------------------------------anonymous function-------------<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<
+
+        const multi = function sqaure(n1, n2) {
+            return n1 * n2;
+        }
+        let r3 = multi(5, 2);
+        document.write(r3);
+
+        //-----------------------------------------------------arrow function----------------------------
+        document.write("<br>");
+        let sqaure1 = num => num * num;
+        let r4 = sqaure1(9);
+        document.write(r4);
+
+
+        //-------------------------------------------------------Nested function--------------
+        document.write("<br>");
+        function greet(firstname) {
+            function sayHello() {
+                document.write(`hello, ${firstname}`);
+            }
+            return sayHello();
+        }
+        greet("kriti sharma");
+
+
+        //-----------------------------------------------------question---------------
+        document.write("<br>");
+        // const user = prompt("Enter your name...");
+
+        // if (user !== null) {
+        //     user1 = user.charAt(0).toUpperCase() + user.slice(1);
+        //     document.write(`Hello, ${user1}!`);
+        // }
+        // else {
+        //     document.write("please again start and write.");
+        // }
+
+
+        //---------------------------------------------find the largest word-----------
+
+        document.write("<br>");
+
+
+        let sentence = "web development course";
+        let words = sentence.split(' ');
+
+        let largestWord = words[0];
+
+        for (let i = 1; i < words.length; i++) {
+            if (words[i].length > largestWord.length) {
+                largestWord = words[i];
+            }
+        }
+
+        document.write("The largest word is:", largestWord);
+        //------------   -----------------------------------------oops concept-----------
+        document.write("<br>");
+
+        class school {
+            constructor(name, date) {
+                this.name = name;
+                this.date = date;
+            }
+            greet() {
+                console.log(`hello,my name is ${this.name}`);
+            }
+        }
+
+        let x = new school("kriti", 21);
+        let x1 = new school("priya", 28);
+        document.write(x.name, " ", x.date, "<br>");
+        document.write(x1.name, " ", x1.date);
+
+        console.log(x1);
+        x1.greet();
+
+        //---------------------------------------------static method----------------------
+        class addition {
+            static add(a, b) {
+                return a + b;
+            }
+        }
+        console.log(addition.add(9, 2));
+        //-------------------------------------------------inheritance------------------------
+
+        class person {
+            constructor(name) {
+                this.name = name;
+
+            }
+            greet() {
+                console.log(`hello,my name is ${this.name}`);
+            }
+        }
+
+        class student extends person {
+
+        }
+        let student1 = new student("kriti");
+        student1.greet();
+        // //--------------------------------------------------example------------------------------
+
+        class animal {
+            speak() {
+                console.log("some gerneric animal sound");
+
+            }
+        }
+
+        class dog extends animal {
+            speak() {
+                console.log("woof")
+            }
+        }
+        class cat extends animal {
+            speak() {
+                console.log("kr");
+            }
+        }
+        const pat = new dog();
+        pat.speak();
+
+
+        class car {
+            constructor(name, model, colour) {
+                this.name = name;
+                this.model = model;
+                this.colour = colour;
+
+            }
+            description() {
+                document.write("<br>",this.name,"<br>");
+                document.write(this.model,"<br>");
+                document.write(this.colour);
+            }
+        }
+        class owner extends car{
+            constructor(oname){
+                this.oname = oname;
+            }
+            description() {
+                document.write(`<br> ${this.oname} <br>`);
+                // document.write("<br>",this.name,"<br>");
+                // document.write(this.model,"<br>");
+                // document.write(this.colour);
+            }
+        }
+        let all = new owner("kri");
+        all.description();
+
+
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

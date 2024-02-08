@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+    <title>class 1</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body>
+    <h1 class="animate__animated animate__bounce">kriti sharma </h1>
+
+    <div ng-app=""
+        ng-init="quantity=89;cost=500; firstname='kritiiii'; secondName='sharma';marks= [20,10,20,545]">
+        <!-- <p style="background-color: {{myTxt}}" ng-model="myTxt">kritii </p>  -->
+        <h1 class="animate__animated animate__bounce">Registration process </h1>
+        <p>Name :<input type="text" ng-model="name"></p>
+        <h5>Hello {{name}}</h5>
+        <p ng-bind="name"></p>
+
+        <p>password: <input type="password" ng-model="password"></p>
+        <h5>your passwords is {{password}}</h5>
+
+        <p>Expression value: {{7+3}}</p>
+        <p>Total in dollar: {{ quantity * cost }}</p>
+        <p>your full name is: {{firstname+" "+secondName}}</p>
+        <p>The array is: {{marks[1]}}</p>
+
+    </div>
+
+
+    <!-- <div  ng-app="" ng-init="firstname='kritiiii'; secondName='sharma'">
+<p>your full name is: {{firstname+" "+secondName}}</p>
+    </div> -->
+    <!-- <div  ng-app="" ng-init="marks= [20,10,20,30,20,8,9,9,80,7,6,545]">
+        <p>The array is: {{marks[8]}}</p>
+            </div> -->
+</body>
+
+</html>

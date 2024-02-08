@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 11</title>
+    <!-- <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var a1 = document.getElementById("m2")
+            console.log(a1.textContent)
+        })</script> -->
+</head>
+
+<body>
+    <div id="m1">hello, this is selection element of id in body</div>
+    <div id="m2">hello, this is selection element of id in header</div>
+    <p>kriti sharma</p>
+    <p>priya sharma</p>
+
+
+    <form>
+        <b>Username: </b> <input type="text" placeholder="Enter the username" name="username">
+        <input type="button" onclick="printvalue()" value="submit">
+    </form>
+    <div class="c1">hello</div>
+    <div class="c1">welcome , this is selection element of class</div>
+    <button onclick="changestyle()">Change style</button> -->
+
+
+
+    <h1>kriti sharma</h1>
+    <h2>I am web developer from india...</h2>
+    <h3>I am from hamirpur distt. (himachal pradesh)</h3>
+    <h4>Hobbies</h4>
+    <ul>
+        <li>Dance</li>
+        <li>watching movies</li>
+        <li>Playing Games like a kabbadi.</li>
+    </ul>
+    <img src="D:\CDAC\img\j1.jpg"><br>
+    <button data-action="submit">Submit</button>
+    <hr>
+    <a href="https://github.com/KritiiSharma">Link 1</a><br>
+    <a href="https://stackoverflow.com/users/22524100/kriti-sharma">Link 2</a><br>
+    <a href="https://kritisharmablogger.blogspot.com/">Link 3</a>
+
+    <button disabled>Disabled button</button>
+
+    <table border="1">
+        <tr>
+            <td>row 1</td>
+        </tr>
+        <tr>
+            <td>row 2</td>
+        </tr>
+
+        <tr>
+            <td>row 3</td>
+        </tr>
+
+        <tr>
+            <td>row 4</td>
+        </tr>
+
+    </table>
+
+    <button onclick="alert('button clicked!');">Click me</button>
+
+    <div onmouseover="this.style.backgroundColor='lightgray' ;">Hover over</div>
+    <button onmousedown="alert('Mouse button pressed!');" onmouseup="alert('button released')">Press Me</button>
+    <br>
+
+    <button ondblclick="alert('button double clicked!');">double Click me</button>
+
+
+    <input type="text" onfocus="this.style.backgroundColor='lightgrey';" placeholder="focus on me">
+    <select onchange="alert('value changed to:' +this.value);">
+        <option value="apple">Apple</option>
+        <option value="banana">Banana</option>
+    </select><br>
+
+    <input type="text" onkeydown="console.log('key Down');" onkeyup="console.log('key up');"
+        onkeypress="console.log('key pressed');"><br>
+    <button class="btn">okay!</button>
+
+    <script>
+        async function fetchData(url) {
+            const response = await fetch(url);
+            const data = await response.json();
+            return data;
+        }
+
+        fetchData('https://jsonplaceholder.typicode.com/todos')
+            .then(data => console.log(data))
+            .catch(error => console.error('There was an error fetching data', error));
+
+
+        async function fetchData(url) {
+            try {
+                const response = await fetch(url);
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('There was an error fetching data');
+            }
+        }
+        fetchData('https://jsonplaceholder.typicode.com/todos')
+
+
+        const myPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('promise resolved');
+            }, 3000);
+        });
+        myPromise.then((msg) => {
+            console.log(msg);
+        }).catch((err) => {
+            console.log(err);
+        })
+
+
+        function myCallback() {
+            console.log("Callback function executed");
+        }
+        setTimeout(myCallback, 3000);
+        //--------------synchronous javascript------------
+        console.log("I");
+        console.log("can");
+        console.log("learn");
+
+        //---------------------asynchronous javascript---------------------------
+        console.log("I");
+        setTimeout(() => {
+            console.log("can");
+        }, 2000);
+        console.log("learn");
+
+
+        setTimeout(function () {
+            alert('This will show after 3 seconds!');
+        }, 3000);
+
+
+
+
+
+        var a3 = document.querySelector(".btn")
+        a3.addEventListener("click", function () {
+            alert('button clicked using the eventlistener')
+            a3.innerHTML = "hello"
+            a3.style.color = "yellow"
+            a3.style.backgroundColor = "black"
+
+        })
+
+
+        //-----------------------table--------------------------------------
+        const s8 = document.querySelectorAll("tr:nth-child(even)");
+        s8.forEach((row) => {
+            row.style.color = "pink";
+            row.style.backgroundColor = "lightgrey";
+        });
+
+        const s7 = document.querySelector("button[disabled]");
+        s7.style.opacity = "0.7";
+        //---------------------------link-----------
+        const s6 = document.querySelectorAll('a[href^="https://kritisharmablogger.blogspot.com/"]');
+        s6.forEach(link => {
+            link.style.backgroundColor = "black";
+            link.style.color = "white";
+        })
+
+        //--------------------------------------------------------------------button styling----------------------
+        const b1 = document.querySelector("button[data-action='submit']");
+        b1.style.padding = "10px 20px";
+        b1.style.backgroundColor = "yellow";
+        b1.style.color = "black";
+        b1.style.fontSize = "1.2rem"
+
+        //----------------------ul & H1 tag----------------------
+        const s2 = document.querySelector("ul>li:first-child");
+        s2.innerHTML = "Motivational stories";
+
+        const s3 = document.querySelector("h1");
+        s3.style.color = "black";
+        s3.style.backgroundColor = "lightpink";
+        s3.style.fontSize = "2rem";
+        s3.style.fontWeight = "bold";
+        s3.style.textShadow = "2px 1px  5px red";
+
+
+        const s4 = document.querySelectorAll("[data-prefix^='top-h1']");
+        console.log(s4);
+        const img = document.querySelectorAll("img[src$='.jpg']");
+        img[0].style.width = "100%";
+
+        //-------------------------------simple id selector----------------------------------------
+        var a = document.getElementById("m1");
+        console.log(a.textContent);
+
+        var a1 = document.getElementById("m2");
+        console.log(a1.textContent);
+        //------------------------------------------------tag name selector--------------------------------------
+        const a2 = document.getElementsByTagName("p");
+        console.log(a2[0].textContent);
+        console.log(a2.length);
+        function changestyle() {
+            const a4 = document.getElementsByClassName("c1");
+            for (let i = 0; i < a4.length; i++) {
+                a4[i].style.color = "blue";
+                a4[i].style.fontSize = "2rem";
+                a4[i].style.fontWeight = "bold";
+                a4[i].style.textShadow = "2px 1px  5px red";
+                a4[i].style.backgroundColor = "lightgray"
+            }
+        }
+
+        //-----------------------input type select----------------------------------
+        const s1 = document.querySelector("input[type='text']");
+        s1.style.color = "black";
+        s1.style.backgroundColor = "lightpink";
+
+
+
+        //---------------------only one class seclect----------------------------------------
+
+
+        var a6 = document.querySelector(".c1");
+        console.log(a6.textContent);
+
+        //---------------------------multiple query selector --------------------------------------
+
+        var a6 = document.querySelectorAll(".c1");
+        a6[0].innerHTML = "change";
+        a6[0].style.color = "black";
+        a6[0].style.backgroundColor = "blue";
+        console.log(a6[0].textContent);
+        //---------------------highlight---------------------
+
+        var a8 = document.querySelectorAll("[class~='c1']");
+        console.log(a8[1].textContent);
+
+        //----------------------only id selctor--------------------------
+        var a7 = document.querySelector("#m1");
+        console.log(a7.textContent)
+
+        function printvalue() {
+            const a5 = document.getElementsByName("username");
+            alert("Welcome: " + a5[0].value);
+        }
+
+    </script>
+</body>
+
+</html>

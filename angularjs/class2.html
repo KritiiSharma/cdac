@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 2</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+
+<body ng-app="myApp">
+     <div ng-controller="myCtrl">
+        <p>{{city | uppercase}}</p>
+        <p>{{name | lowercase}}</p>
+        <p>{{arr | orderBy: 'arr' }}</p>
+            <p>{{nr}}</p>
+    </div>
+    <script>
+        var a = angular.module('myApp', []);
+        a.controller('myCtrl', function($scope) {
+            $scope.city = "hamirpur";
+            $scope.name="kriti Sharma";
+            $scope.arr=[10,656,20,7656,30,40,67,77];
+            $scope.nr="kri";
+        });
+    </script> 
+    
+
+    <!-- <div ng-controller="myCtrl">
+        <p>original date: {{Date}}</p>
+        <p>Formatted Date:(dd-MM-YYYY): {{formatteddate | date:'dd-MM-yyyy'}}</p>
+        <p>formatted date: (h:mm a): {{formatteddate | date:'h:mm a'}}</p>
+        <p>formatted date: {{formatteddate | date:'yyyy-MM-dd h:mm a'}}</p>
+        <p>formatted date: (YYYY-MM-dd h:mm a): {{formatteddate | date:'yyyy-MM-dd h:mm a'}}</p>
+        <p>Formatted Date:(EEE-MM-d-YYYY): {{formatteddate | date:'EEE-MM d-yyyy'}}</p>
+        
+    </div>
+    <script>
+        var a = angular.module('myApp', []);
+        a.controller('myCtrl', function ($scope) {
+            $scope.Date = new Date();
+            $scope.formatteddate = $scope.Date;
+        });
+    </script> -->
+
+
+
+    <!-- <p>The favorite color: </p>
+    <h1>{{color}}</h1>
+
+    <div ng-controller="myCtrl">
+        <p>the scope of the favorite color: </p>
+        <h1>{{color}}</h1>
+    </div>
+
+    <p>The favorite color:</p>
+    <h1>{{color}}</h1>
+
+
+    <script>
+        var app = angular.module('myApp', []);
+        app.run(function($rootScope) {
+            $rootScope.color = "green";
+        });
+        app.controller('myCtrl', function($scope) {
+            $scope.color = "Red";
+        });
+    </script> -->
+
+
+
+
+    <!-- <div ng-app="myApp" ng-controller="myCtrl">
+        <p>{{city}}</p>
+    </div>
+    <script>
+        var a = angular.module('myApp', []);
+        a.controller('myCtrl', function($scope) {
+            $scope.city = "hamirpur";
+        });
+    </script> -->
+
+
+    <!-- <div ng-app="" >
+        <p>City :<input type="text" ng-model="name"></p>
+        <h5>I am from {{name}}</h5>
+        <p ng-bind="name"></p> -->
+</body>
+
+</html>

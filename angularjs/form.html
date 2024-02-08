@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <title>form</title>
+</head>
+
+<body ng-app="myApp" ng-controller="myCtrl">
+
+    <form >
+        <h1>Registration process</h1>
+        <table>
+            <tr>
+                <th><b>Name: </b></th>
+                <td><input type="text" ng-model="name" placeholder="Enter Your Name">
+                 
+                 </td>
+            </tr>
+            <tr>
+                <th><b>Phone Number: </b></th>
+                <td><input type="tel" ng-model="t" placeholder="Enter Your phn number">
+                 
+                 </td>
+            </tr>
+            <tr>
+                <th><b>Email: </b></th>
+                <td><input type="email"  ng-model="em" placeholder="Enter your email"></td>
+            </tr>
+            <tr>
+                <th><b>Age: </b></th>
+                <td><input type="number" ng-model="a" placeholder="Enter your age"></td>
+            </tr>
+            <tr>
+                <th><b>Address: </b></th>
+               <td> <textarea rows="7" cols="89">Enter your address</textarea>
+                </td>
+
+            </tr>
+            <tr>
+                <th><b>Gender: </b></th>
+                <td><input type="radio" name="gender" value="male">male
+                <input type="radio" name="gender" value="male">female</td>
+
+            </tr>
+            <tr>
+                <th>Technology: </th>
+                <td><input type="checkbox" name="tech">Java
+                <input type="checkbox" name="tech">C++
+                <input type="checkbox" name="tech">WEB DEVELOPMENT
+            </td></tr>
+
+
+            <tr>
+                <th><b>Select your course:</b></th>
+
+<td>
+                <select name="c" ng-model="s">
+            
+        <option value="B.tech">B.tech</option>
+                <option value="ITI">ITI</option>
+                <option value="Polytechnic">POLYTECHNIC</option>
+                </td>
+                </select>
+            </tr>
+            <tr>
+                <td>
+            <a href="#main">Submit</a></td>
+            </tr>
+            
+        </table>
+
+
+       
+    </form>
+
+    <main id="main">
+
+        <p>This is your name:  {{name}}</p>
+        <p>This is your phone number: {{t}}</p>
+        <p>This is your email: {{em}}</p>
+    <p>This is your age:  {{a}}</p>
+    <p>This is your course:  {{s}}</p>
+
+    </main>
+  
+
+    <script>
+      
+        var a = angular.module('myApp', []);
+        a.controller('myCtrl', function($scope) {
+        
+            $scope.name;
+            $scope.t;
+            $scope.em;
+            $scope.a;
+            $scope.s;
+
+
+           
+        });
+    
+    </script>
+</body>
+
+</html>

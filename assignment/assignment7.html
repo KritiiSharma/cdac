@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="this is the description of the web page">
+    <meta name="keywords" content="HTML,CSS, Javascript">
+    <meta name="author" content="kriti">
+
+    <title>assignment 7</title>
+    <script>
+        //>>>>>>>>>>>>>>>>>>>>>>>>even number from 0 to 50<<<<<<<<<<<<<<<<<<<<<<<<<<<
+        document.write("Even number from 0 to 50");
+        document.write("<br>");
+        for (let i = 0; i <= 50; i += 2) {
+
+            document.write(i, " ");
+        }
+
+
+        //>>>>>>>>>>>>>>>>>>>>>>>>Replace the every second element with Z in given string "HelloClass". (Assume no space)
+        document.write("<br>"); document.write("<br>");
+
+        var str = "Helloclass";
+        var s = " ";
+        for (let j = 0; j <= str.length; j++) {
+            if (j % 2 != 0 || j == 1) {
+                s += "Z";
+            }
+            else {
+                s += str.charAt(j);
+            }
+        }
+        document.write(s);
+
+
+
+
+        //------------------ Check string contain "JS" print yes and no----------
+        document.write("<br>"); 
+        let name = "hello.. this is a JS class"
+        if (name.includes("JS")) {
+            document.write("Yes");
+
+        }
+        else {
+            document.write("No");
+
+        }
+
+        //---------------- Program to print the letter H pattern using # symbol.
+
+    document.write("<br>")
+
+    let h = 7;
+   for(let row = 0 ; row < h ; row++){
+    for(let col = 0 ; col  < h; col++){
+        if(col==0 || col == h-1  || row== Math.floor(h/2)){
+            document.write("#");
+        }else{
+            document.write("&nbsp;&nbsp;");
+        }
+    }
+    document.write("<br>");
+   }
+   
+        //------------------Find the no of digits in a number 83356
+
+        document.write("<br>"); 
+        let n7 = 83356;
+        let num = n7.toString();
+        let numberOfDigits = num.length;
+        document.write(`The number of digits in ${n7} is: ${numberOfDigits}`);
+
+        //--------------------Find the largest number using loop and ternary operator from given array [2, 45, 3, 67, 34, 567, 34, 345, 123]; 
+
+        document.write("<br>"); document.write("<br>");
+        let array = [2, 45, 3, 67, 34, 567, 34, 345, 123];
+        let a9 = array[0];
+        for (let j = 1; j < array.length; j++) {
+            a9 = array[j] > a9 ? array[j] : a9;
+
+        }
+        document.write(a9);
+
+
+        //-----Write a JavaScript for loop that iterates from 0 to 15. For each iteration, it checks if the current number is odd or even, and displays a message on the screen.
+        // "0 is even"
+        // "1 is odd"
+        // "2 is even".......
+        document.write("<br>"); document.write("<br>");
+
+
+        for (let i = 0; i <= 15; i++) {
+            if (i % 2 == 0) {
+                document.write(i, " is even", "<br>");
+
+            }
+            else {
+                document.write(i, " is odd", "<br>")
+            }
+        }
+
+
+
+        document.write("<br>"); document.write("<br>");
+
+        //-------Print number that is multiple of 3 from 3 to 20
+        // Sample Output:
+        // 3,6,9,12,15.........
+
+
+        for (let i = 3; i <= 20; i++) {
+            if (i % 3 == 0) {
+                document.write(i);
+            }
+            else {
+                document.write(" ");
+            }
+        }
+
+
+
+        document.write("<br>"); document.write("<br>");
+        //-------------Find the average of elements in given array [20,24,30,16]
+  //--------------------------------------------------find average of element of array-------------------------------------------------------------
+   
+   let arrays =  [20,24,30,16];
+   let average = 0;
+   for(let i = 0 ; i < arrays.length; i++){
+    average +=arrays[i];
+   }
+   document.write("average : "+ (average / arrays.length));
+
+   //-------------------------------------------------------count t---------------------------------------------------------------------------------
+   let strings = "Hello our class starts at 9:30 am and it may completes by 4:30 pam";
+    let counts = 0;
+    for(let i = 0 ; i < strings.length; i++){
+        if(strings.charAt(i)=='t'){
+            counts++;
+        }
+    }
+    document.write("<br>",counts);
+        
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

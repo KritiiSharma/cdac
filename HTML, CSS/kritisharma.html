@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1 {
+            font-size: larger;
+        }
+
+        h2 {
+            font-size: larger;
+        }
+
+        h3 {
+            font-size: larger;
+        }
+
+        h4 {
+            font-size: larger;
+        }
+    </style>
+</head>
+
+<body>
+    <!-----------------------------------------simple text -->
+    <h1>hello</h1>
+    <h2>hii</h2>
+    <h3>how are you..</h3>
+    <h4>whats up..
+    </h4>
+    <h5>javascript</h5>
+
+    <!--------------------------------javascript DOM(document object modell̥) -->
+    <script>
+
+        // 4 pillors of DOM 
+        // 1. Selecting  of an elements
+
+
+        var a = document.querySelector("h1")
+        console.log(a);
+
+        // 2. changing html
+
+        var a1 = document.querySelector("h2")
+        a1.innerHTML = "changed"
+        // 3. changing CSS
+
+        var a2 = document.querySelector("h3")
+        a2.innerHTML = "hello"
+        a2.style.color = "yellow"
+        a2.style.backgroundColor = "black"
+
+        // 4 addEventListener
+        var a3 = document.querySelector("h4")
+        a3.addEventListener("click", function () {
+            a3.innerHTML = "hello"
+            a3.style.color = "yellow"
+            a3.style.backgroundColor = "black"
+
+        })
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Class 8</title>
+    <script>
+        console.log("hello my name is kriti sharma")
+        document.write("simple console statement");
+        document.write("<br>");
+        var x = 10;
+        document.write(x);
+        document.write("<br>");
+        document.write("document.write operation");
+        document.write("<br>");
+        var name = "kriti sharma"; // string
+        document.write(name);
+        document.write("<br>");
+        var a = [1, 2, 3]  // array
+        document.write(a);
+        document.write("<br>");
+        document.write(a[2]);    //only one specific array print
+        document.write("<br>");
+        var o = { n: "kriti", age: 21 } //array values print
+        document.write(o.age);
+        document.write("<br>");
+        var str1 = "hello";  //concatenation
+        var str2 = "class";
+        var str3 = str1 + " " + str2;
+        document.write(str3);
+        document.write("<br>");
+        var x = 10; // addition operation
+        var y = 20;
+        var c = x + y;
+        document.write(c);
+        document.write("<br>");
+        document.write(10 > 9);// boolean operation(true & false)
+
+
+        document.write("<br>");
+        // opertors
+        // arithmetic operators
+        // logical opertors
+        // assignment operators
+        // conditional operators
+        // comparison opeartors
+
+        var n1 = 9;
+        var n2 = 9;
+        document.write(n1 = n2);
+        document.write("<br>");
+
+        document.write(n1 == n2);
+        document.write("<br>");
+
+        document.write(n1 === n2);
+        document.write("<br>");
+        document.write("<br>");
+
+        let m = 10;
+        let p = 3;
+        document.write((m + p) * 3);
+        document.write("<br>");
+        document.write(m + p * 3);
+
+        document.write("<br>");
+        document.write("<br>");
+
+        let agep = 21;
+        if (agep > 18) {
+            console.log("now you can eligible to vote");
+        }
+        else {
+            console.log("you are not eligible to vote");
+        }
+
+        document.write("<br>");
+
+
+        let agep1 = 17;
+        if (agep1 > 18) {
+            console.log("now you can eligible to vote");
+        }
+        else {
+            console.log("you are not eligible to vote");
+        }
+        document.write("<br>");
+
+        let agep2 = 17;
+        if (agep2 > 18) {
+            console.log(" you can eligible for vote");
+        }
+        else if (agep2 == 17) {
+            console.log("wait for one year")
+        }
+        else {
+            console.log("not eligible for vote");
+        }
+
+
+        let marks = 20;
+        if (marks > 90) {
+            document.write("A");
+        }
+        else if (90 & 60 < 90) {
+            document.write("B");
+        }
+        else if (18 < 60) {
+            document.write("C");
+        }
+        else {
+            document.write("D");
+        }
+
+        let kri = "break";
+        switch (kri) {
+            case "yes":
+                console.log("x is yes");
+                break;
+            case "no":
+                console.log("x is no");
+                break;
+            case "maybe":
+                console.log("x is maybe");
+                break;
+            default:
+                console.log("x is something else");
+
+        }
+
+        var a1 = 0;
+        var b1 = -1;
+        var c1 = 3;
+        var d1 = -2;
+        if (a1 > b1 && a1 < c1 && a1 > d1) {
+            if (b1 > c1 && b1 > d1) {
+                if (c1 > d1) {
+                    console.log(a1, b1, c1, d1);
+                }
+                else {
+                    console.log("false1");
+                }
+            }
+            else {
+                console.log("false2");
+            }
+        }
+        else {
+            console.log("false3");
+        }
+
+
+        var h = 5;
+        var i = 10;
+        var j = 20;
+        if (h >= i && h >= j) {
+            console.log(h);
+        }
+        else if (i >= h && i >= j) {
+            console.log(i);
+        }
+        else {
+            console.log(j);
+        }
+
+        let xx=30;
+        let yy=40;
+        let max;
+        max=(xx>yy)?xx:yy;
+        console.log(max);
+
+
+
+        const age=21;
+        const message=age>=18?
+        "You are an adult":"You are not an adult";
+        console.log(message);
+
+
+
+        let marks1=95;
+        let result=(marks1<40)?"unsatisfactory": 
+        (marks1<60)?"average": 
+        (marks1<80)?"good":
+        "excellent";
+        console.log(result);
+
+        document.write("<br>");
+
+        let n10=10;
+        let n30=30;
+        let n40=40;
+        let mx=(n10>n30 && n10>n40)?"10 is a larger":
+        (n30>n10 && n30>n40)?"30 is a larger": 
+        (n40>n30 && n10<n40)?"40 is a larger number":
+        "larger number";
+        document.write(mx);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

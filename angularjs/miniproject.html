@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is the description of the web page">
+    <meta name="keywords" content="HTML, CSS, Javascript">
+    <meta name="author" content="kriti">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Word Game</title>
+</head>
+<body>
+   <div class="m"><h1 class="animate__animated animate__bounce">Let's play the word game.</h1></div>
+   
+   <div class="container">
+    <div id="welcome-container">
+        <label for="userName" style="font-size: larger; font-weight: bold;">Please enter your name:</label><br>
+        <input type="text" id="userName" placeholder="Enter Your Name...." required>
+        <button onclick="startGame()">Start Game</button>
+    </div>
+
+    <div id="game-container" style="display: none;">
+        <h2 id="greeting" style="font-size: 2rem; text-shadow: 1px 1px 10px rgb(50, 255, 63);"></h2>
+        <div id="word-container"></div>
+        <input type="text" id="userGuess" placeholder="Enter Your Guess....">
+        <button id="submitGuessBtn" onclick="checkGuess()">Submit Guess</button>
+
+        <p id="result"></p>
+        <p id="finalMarks" style="display: none;"></p>
+        <p id="finalMessage"></p>
+        <button onclick="playAgain()">Play Again</button>
+        <button onclick="reloadPage()">Refresh</button>
+    </div>
+</div>
+
+<footer class="footer">
+    <p>&copy; 2024 Word Game | Designed by  &hearts; kriti sharma  &hearts;</p>
+</footer>
+
+<script src="s.js"></script>
+
+<script>
+    function reloadPage() {
+        location.reload();
+    }
+
+   
+</script>
+
+</body>
+</html>
+
+
+
